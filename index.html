@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOLE WESLEYENNE DE MARE-SUCRIN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;
+0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <section class="nav">
+   <nav>
+    <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="#">Objectif</a></li>
+        <li><a href="#">Rapport excel</a></li>
+        <li><a href="#">liste donateurs</a></li>
+        <li class="hideOnMobile"><a href="#">Contact</a></li>
+    </ul>
+    <ul>
+      
+        <li class="hideOnMobile"><a href="#">Accueil</a></li>
+        <li class="hideOnMobile"><a href="galerie.html">Galerie</a></li>
+        <li class="hideOnMobile"><a href="#">Objectif</a></li>
+        <li class="hideOnMobile"><a href="#">Rapport excel</a></li>
+        <li class="hideOnMobile"><a href="#">liste donateurs</a></li>
+        <li class="hideOnMobile"><!----><a href="#" class="exclude"><button class="contactButton">
+            <p>Contact</p>
+            <div class="iconButton">
+              <svg
+                height="24"
+                width="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </button>
+          </a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+   </nav>
+</section>
+<section class="imageakey">
+   <div class="image-container">
+    <img src="ECOLE.jpg" alt=""class="image1" width="100%">
+    <div class="gradient-overlay">
+        <div id="welcome-message">Bienvenue!</div>
+        <div id="content">
+            <h1 id="title">ECOLE<br> WESLEYENNE DE MARE-SUCRIN</h1>
+            <p id="text"></p>
+         
+            <button class="btn-donate">
+                Donate now
+            </button>
+        </div>
+    </div>
+   </div>
+</section>
+<!--dezyem konpatiman-->
+<section class="text-container">
+  <h2>Building a Better World for and Children</h2>
+  <p>It is possible to donate in the name of a third party, making a gift in honor or memory of someone or something</p>
+</section>
+<section class="card-slider">
+  <div class="slider-container">
+      <div class="card">
+        <div class="header">
+          <div class="image">
+            <img src="donation.png" alt="">
+            
+          </div>
+          <div class="content">
+            <span class="title">Become A Volunteer </span>
+            <p class="message">We improve the health of children and families so children no longer die of preventable illnesses and live past their fifth birthday </p>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat the card 6 times -->
+      <div class="card">
+        <div class="header">
+          <div class="image">
+            <!-- SVG icon -->
+            <img src="helping-hand.png" alt="">
+          </div>
+          <div class="content">
+            <span class="title">Get Support Directly</span>
+            <p class="message">We create greater access to quality education and ensure that girls and boys are able to learn in safe and positive environments.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+          <div class="header">
+            <div class="image">
+              <!-- SVG icon -->
+              <img src="donate.png" alt="">
+            </div>
+            <div class="content">
+              <span class="title">Sen Us Donate</span>
+              <p class="message">We ensure children are safe at all times and prevent their exposure to abuse, neglect, exploitation and violence.</p>
+            </div>
+          </div>
+        </div><div class="card">
+          <div class="header">
+            <div class="image">
+              <!-- SVG icon -->
+              <svg aria-hidden="true" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none">
+                <path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" stroke-linejoin="round" stroke-linecap="round"></path>
+              </svg>
+            </div>
+            <div class="content">
+              <span class="title">Desactivate account4</span>
+              <p class="message">Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.</p>
+            </div>
+          </div>
+        </div><div class="card">
+          <div class="header">
+            <div class="image">
+              <!-- SVG icon -->
+              <svg aria-hidden="true" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none">
+                <path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" stroke-linejoin="round" stroke-linecap="round"></path>
+              </svg>
+            </div>
+            <div class="content">
+              <span class="title">Desactivate account5</span>
+              <p class="message">Are you sure you want to deactivate your account? <br>All of your data will be permanently removed. This action cannot be undone.</p>
+            </div>
+          </div>
+        </div><div class="card">
+          <div class="header">
+            <div class="image">
+              <!-- SVG icon -->
+              <svg aria-hidden="true" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none">
+                <path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" stroke-linejoin="round" stroke-linecap="round"></path>
+              </svg>
+            </div>
+            <div class="content">
+              <span class="title">Desactivate account6</span>
+              <p class="message">Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.</p>
+            </div>
+          </div>
+        </div>
+     
+  </div>
+  <button class="prev">←</button>
+  <button class="next">→</button>
+  
+</section>
+
+<div class="containerr">
+  <div class="lef">
+    <div class="grand-carre">
+        <div class="petit-carre top-left"></div>
+        <div class="petit-carre top-right"></div>
+        <div class="petit-carre bottom-left"></div>
+        <div class="petit-carre bottom-right"></div>
+
+        <!-- Carte superposée contenant les photos -->
+        <div class="cardd">
+            <div class="photo"><img src="ECOLE.jpg" alt="Photo 1"></div>
+            <div class="photo"><img src="projeecole.jpg" alt="Photo 2"></div>
+            <div class="photo"><img src="projeecole.jpg" alt="Photo 3"></div>
+            <div class="photo"><img src="Snapchat-1567148797[10].jpg" alt="Photo 4"></div>
+        </div>
+    </div>
+  </div>
+  <div class="right">
+    <!-- Conteneur pour le texte -->
+    <div class="text-containerr">
+        <h2>How We're Making <br>a Difference</h2>
+        <p>There are also circumstances when people like to donate funds to their preferred causes by not revealing their names. Many donors such as piblic figures or philanthropists like to stay anonymes
+<br><br>
+          Usually directing donations to a charitable organization for which the deceased was a donor or volunter, or for a cause befiting the deceased's priorities in life or manner of death. Menorial donations ginen ceremony. 
+        </p>
+    </div>
+    <button class="btn-donatee">
+      Donate now
+  </button>
+  </div>
+</div>
+<div class="video-container">
+  <video id="myVideo" src="videopeinture.mp4"></video>
+  <div class="overlay">
+    <button class="play-button" onclick="playVideo()"><svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg></button>
+  </div>
+  
+</div>
+<!--5em konpatiman-->
+<div class="main-container">
+  <div class="left-content">
+    <div class="text-wrapper">
+      <h2>Helping Each Other Can Make World Better</h2>
+      <p>There are also circumstances when people like to donate funds to their preferred causes by not revealing their names. Many donors such as public figures or philanthropists like to stay anonymous.</p>
+      
+      <div class="icon-group">
+        <div class="icon-wrapper">
+          <div class="icon-bg">
+            <img src="helping-hand.png" alt="">
+          </div>
+          <div class="icon-description">
+            <h3>Join Our Team</h3>
+            <p>There are also when <br>people like to donate</p>
+          </div>
+        </div>
+        
+        <div class="icon-wrapper">
+          <div class="icon-bg">
+            <img src="donate.png" alt="">
+          </div>
+          <div class="icon-description">
+            <h3>Start Donating</h3>
+            <p>There are also when <br>people like to donate</p>
+          </div>
+        </div>
+      </div>
+      
+      <button class="donate-button">
+        Donate now
+      </button>
+    </div>
+  </div>
+  
+  <div class="right-section">
+    <div class="large-square">
+        <div class="small-square top-left-corner"></div>
+        <div class="small-square top-right-corner"></div>
+        <div class="small-square bottom-left-corner"></div>
+        <div class="small-square bottom-right-corner"></div>
+
+        <!-- Carte superposée contenant les photos -->
+        <div class="overlay-card">
+            
+            <div class="photo"><img src="projeecole.jpg" alt="Photo 3"></div>
+            
+            
+        </div>
+    </div>
+  </div>
+</div>
+<!--6em konpatiman-->
+<div class="compartment">
+  <div class="image-left">
+      <div class="overlay">
+          <h1>BECOME A VOLUNTEER</h1>
+          <p class="large-text">Join your hand with us for a<br>better life and future</p>
+          <p class="small-text">Volunteering often plays a pivotal role in the recovery<br>effort following natural disasters, such as tsunamis,<br> floods, droughts, hurricanes, and earthquakes. For<br> example</p>
+          
+<button class="join">
+ Join with us
+
+</button>
+      </div>
+  </div>
+  <div class="image-right">
+      <!-- L'image de droite -->
+  </div>
+</div>
+
+<!--7em konpatiman-->
+<div class="compartment1">
+  <div class="image-container1">
+      <img src="afterschool-activities_236854-18762.avif" alt="Image de fond">
+      <div class="overlay1">
+          <h2>Introduce<br>Our Featured<br>Non Profit<br>Causes</h2>
+          <p>It is possible to donate in the name of a<br> third party. making a gift in honor or memory<br> of someone or something</p>
+      </div>
+      <!-- Carte superposée et deux cartes supplémentaires -->
+      <div class="card1 card11">
+          <img src="close-up-kids-making-soap-bubbles-outside_23-2149265007.avif" alt="Photo 1">
+          <h3>Help to Homeless Peoples</h3>
+          <p><span class="highlight">$12,00 donated </span> of 2,000 goal</p>
+      </div>
+      <div class="card1 card21">
+          <img src="group-african-kids-learning-together_23-2148892522.avif" alt="Photo 2">
+          <h3>Help to Get Education</h3>
+          <p><span class="highlight">$2,000 donated </span> of 3,000 goal</p>
+      </div>
+      <div class="card1 card31">
+          <img src="closeup-shot-black-male-child-erasing-whiteboard_181624-46636.avif" alt="Photo 3">
+          <h3>Help to Get Education</h3>
+          <p><span class="highlight">$15,000 donated </span> of 2,000 goal</p>
+      </div>
+      
+  </div>
+</div>
+<footer>
+  <div class="footer-container">
+      <div class="footer-about">
+          <h3>À propos de nous</h3>
+          <p>Nous sommes une organisation de charité dédiée à améliorer les conditions de vie des personnes dans le besoin.</p>
+          <a href="#">En savoir plus</a>
+      </div>
+
+      <div class="footer-links">
+          <h3>Liens rapides</h3>
+          <ul>
+              <li><a href="#">Faire un don</a></li>
+              <li><a href="#">Événements</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Politique de confidentialité</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-social">
+        <h3>Suivez-nous</h3>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+    
+
+      <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Recevez nos dernières nouvelles directement dans votre boîte mail.</p>
+          <form>
+              <input type="email" placeholder="Votre adresse email">
+              <button type="submit">S'inscrire</button>
+          </form>
+      </div>
+
+      <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>Adresse : 123 Rue de la Charité, Paris</p>
+          <p>Téléphone : +33 1 23 45 67 89</p>
+          <p>Email : contact@charite.org</p>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+      <p>© 2024 Simen Lespwa. Tous droits réservés.</p>
+  </div>
+</footer>
+   <script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+   </script>
+   <script src="scripts.js"></script>
+</body>
+</html>

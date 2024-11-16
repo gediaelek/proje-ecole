@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie de Charité</title>
+    <link rel="stylesheet" href="galerie.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Menu de navigation -->
+    <section class="text-container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#about">objectif</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#">Rapport excel</a></li>
+                <li><a href="#">liste donateurs</a></li>
+                <li class="hideOnMobile"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Texte d'introduction avec disposition alignée -->
+        <h2>Our <br> Humanitarian <br> Efforts</h2>
+        <div class="icon-group">
+            <div class="icon-wrapper">
+                <div class="icon-bg">
+                    <img src="helping-hand.png" alt="">
+                </div>
+                <div class="icon-description">
+                    <h3>Join Our Team</h3>
+                    <p>There are also when <br>people like to donate</p>
+                </div>
+            </div>
+            
+            <div class="icon-wrapper">
+                <div class="icon-bg">
+                    <img src="donate.png" alt="">
+                </div>
+                <div class="icon-description">
+                    <h3>Start Donating</h3>
+                    <p>There are also when <br>people like to donate</p>
+                </div>
+            </div>
+            <div class="icon-wrapper">
+                <div class="icon-bg">
+                    <img src="donation.png" alt="">
+                </div>
+                <div class="icon-description">
+                    <h3>Volunteer</h3>
+                    <p>Together, we can make a <br>difference. Join us to help.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeries de charité -->
+    <!-- Premier compartiment (sans animation) -->
+    <section class="gallery-container no-animation" id="gallery">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="group-african-kids-learning-together_23-2148892522.avif" alt="Association 1">
+                <h3>Association 1</h3>
+                <p>Des enfants africains apprenant ensemble.</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="close-up-kids-making-soap-bubbles-outside_23-2149265007.avif" alt="Association 2">
+                <h3>Association 2</h3>
+                <p>Des enfants s'amusant avec des bulles de savon.</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="closeup-shot-black-male-child-erasing-whiteboard_181624-46636.avif" alt="Association 3">
+                <h3>Association 3</h3>
+                <p>Description de l'association 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deuxième, troisième et nouveau compartiment avec animation -->
+    <section class="gallery-container animated-compartment" id="gallery">
+        <div class="gallery">
+            <div class="gallery-item animated-image">
+                <img src="group-african-kids-learning-together_23-2148892522.avif" alt="Association 1">
+                <h3>Association 1</h3>
+                <p>Des enfants africains apprenant ensemble.</p>
+            </div>
+
+            <div class="gallery-item animated-image">
+                <img src="close-up-kids-making-soap-bubbles-outside_23-2149265007.avif" alt="Association 2">
+                <h3>Association 2</h3>
+                <p>Des enfants s'amusant avec des bulles de savon.</p>
+            </div>
+
+            <div class="gallery-item animated-image">
+                <img src="closeup-shot-black-male-child-erasing-whiteboard_181624-46636.avif" alt="Association 3">
+                <h3>Association 3</h3>
+                <p>Description de l'association 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nouveau compartiment ajouté pour tester l'animation -->
+    <section class="gallery-container animated-compartment" id="gallery">
+        <div class="gallery">
+            <div class="gallery-item animated-image">
+                <img src="group-african-kids-learning-together_23-2148892522.avif" alt="Association 4">
+                <h3>Association 4</h3>
+                <p>Des enfants partageant des connaissances.</p>
+            </div>
+
+            <div class="gallery-item animated-image">
+                <img src="close-up-kids-making-soap-bubbles-outside_23-2149265007.avif" alt="Association 5">
+                <h3>Association 5</h3>
+                <p>Activités de plein air pour les enfants.</p>
+            </div>
+
+            <div class="gallery-item animated-image">
+                <img src="closeup-shot-black-male-child-erasing-whiteboard_181624-46636.avif" alt="Association 6">
+                <h3>Association 6</h3>
+                <p>Initiatives éducatives en groupe.</p>
+            </div>
+        </div>
+    </section>
+    <section class="gallery-container no-animation hidden" id="video-gallery">
+        <div class="gallery">
+            <!-- Video gallery items here -->
+            <div class="gallery-item">
+                <video controls width="100%">
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Association Video 1</h3>
+                <p>Description of the video content.</p>
+            </div>
+            <div class="gallery-item">
+                <video controls width="100%">
+                    <source src="video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Association Video 2</h3>
+                <p>Description of the video content.</p>
+            </div>
+            <!-- Additional videos -->
+        </div>
+    </section>
+    
+    <!-- Button to switch between galleries -->
+    <div class="toggle-button-container">
+        <button id="toggleGalleryButton">Switch to Video Gallery</button>
+    </div>
+
+    <script src="galerie.js"></script>
+</body>
+</html>

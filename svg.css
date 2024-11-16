@@ -1,0 +1,11 @@
+/* Style du div masqué */
+.masked-div {
+    width: 300px;
+    height: 300px;
+    background-color: #4caf50;
+    mask-image: url(#wave-mask); /* Référence au masque SVG */
+    -webkit-mask-image: url(#wave-mask); /* Compatibilité pour les navigateurs WebKit */
+    mask-size: cover;
+    -webkit-mask-size: cover;
+  }
+  

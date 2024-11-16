@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie de Charité</title>
+    <link rel="stylesheet" href="galerie.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Menu de navigation -->
+    <section class="text-container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#about">Objectif</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#">Rapport Excel</a></li>
+                <li><a href="#">Liste Donateurs</a></li>
+                <li class="hideOnMobile"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <h2>Our Humanitarian Efforts</h2>
+    </section>
+
+    <!-- Bouton pour basculer entre galerie d'images et galerie de vidéos -->
+    <section class="gallery-toggle">
+        <button onclick="toggleGallery('photos')">Voir Photos</button>
+        <button onclick="toggleGallery('videos')">Voir Vidéos</button>
+    </section>
+
+    <!-- Galerie des photos -->
+    <section class="gallery-container photos" id="photos-gallery">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="image1.jpg" alt="Photo 1">
+                <h3>Photo 1</h3>
+                <p>Description de la photo 1.</p>
+            </div>
+            <!-- Ajoute plus de photos ici -->
+        </div>
+    </section>
+
+    <!-- Galerie des vidéos -->
+    <section class="gallery-container videos" id="videos-gallery">
+        <div class="gallery">
+            <div class="gallery-item">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+                <h3>Vidéo 1</h3>
+                <p>Description de la vidéo 1.</p>
+            </div>
+            <!-- Ajoute plus de vidéos ici -->
+        </div>
+    </section>
+
+    <script src="teste2.js"></script>
+</body>
+</html>

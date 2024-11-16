@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemple de masque SVG</title>
+  <!-- Lien vers le fichier CSS externe -->
+  <link rel="stylesheet" href="svg.css">
+</head>
+<body>
+
+  <!-- SVG Masque : la forme de vague est définie ici -->
+  <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <mask id="wave-mask" x="0" y="0" width="1" height="1">
+        <!-- La forme de la vague -->
+        <path d="M0,150 Q150,200 300,150 T600,150" fill="white" />
+      </mask>
+    </defs>
+  </svg>
+
+  <!-- Le div auquel on applique le masque -->
+  <div class="masked-div"></div>
+
+</body>
+</html>

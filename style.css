@@ -1,0 +1,1332 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #f4f4f4;
+    
+
+}
+nav{
+    background-color: #0050b3;
+    height: 80px;
+    
+
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+nav li{
+    height: 50px;
+
+    text-align: center;
+    
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+nav a:not(.exclude):hover{
+    background-color: #fff;
+    color: black;
+
+}
+.contactButton {
+    background: #fff;
+    color: white;
+    font-family: inherit;
+    padding: 0.45em;
+    padding-left: 1em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3em;
+  }
+  .contactButton p{
+      color: #1f62f0;
+  }
+  
+  .iconButton {
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7a8cf3;
+    right: 0.3em;
+    transition: all 0.3s;
+    background-color: #1f62f0;
+  }
+  
+  .contactButton:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em #5566c2;
+  }
+  
+  .contactButton:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em #5566c2;
+  }
+  
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur (10px);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+ width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+.image-container {
+    position: relative;
+    display: block;
+}
+.image-container img{
+    width: 100%;
+    height: 680px;
+
+}
+
+.image1{
+    
+    width: 100%;
+    height: auto;
+}
+    .gradient-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+                    linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+        pointer-events: none; display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+        font-family: Arial, sans-serif;
+        
+        overflow: hidden;
+    }
+    .gradient-overlay h1{
+        color: #fff;
+        text-align: center;
+       margin-top: 10px;
+        
+        
+    }
+    .gradient-overlay p{
+      margin:  0 100px 0 100px ;
+      text-align: justify;
+        color: #fff;
+        
+    }
+    .centertexte p{
+        align-items: center; 
+    }
+    
+    
+    #welcome-message {
+        font-size: 2em;
+        animation: hallucinate 3s ease-in-out, fadeOut 2s 3s forwards;
+        margin-top: 10px;
+    }
+    
+    @keyframes hallucinate {
+        0%, 100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.5);
+            opacity: 0.5;
+        }
+    }
+    
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+        }
+    }
+    
+    #content {
+        display: none;
+    }
+    
+    #title, #text {
+        opacity: 0;
+        white-space: pre-wrap;
+    }
+    
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes codeShake {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        25% {
+            transform: translateY(-5px);
+        }
+        75% {
+            transform: translateY(5px);
+        }
+    }
+    
+    #title {
+        animation: slideDown 1s ease-out, codeShake 0.5s 1s infinite;
+        margin-top: -245px;
+    }
+   #text {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+#title {
+    margin-bottom: 20px; /* Ajustez la valeur pour plus ou moins d'espace */
+    font-size: 1.5em; /* Juste pour ajuster la taille si nécessaire */
+    line-height: 1.2; /* Ajuste l'espacement entre les lignes si le texte du h1 est sur plusieurs lignes */
+}
+
+#text {
+    margin-top: 20px; /* Ajoute de l'espace au-dessus du texte */
+    font-size: 1.1em; /* Ajuste la taille du texte du paragraphe */
+    line-height: 1.6; /* Espacement des lignes dans le paragraphe */
+    color: #fff; /* Juste un exemple de couleur, modifiez selon vos besoins */
+}
+
+
+.text-appear {
+    opacity: 1;
+    animation: textSlideIn 1s ease-out forwards;
+}
+
+@keyframes textSlideIn {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+    
+    
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+
+    }
+    .menu-button{
+        display: block;
+    }
+    nav a{
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+}
+svg{
+    color: #fff;
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+        
+    }
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;}
+.teste {
+ width: 100%;
+ background-image: url(IMAGE\ ECOLE.jpg`);
+}
+.image-container img{
+    width: 100%;
+    height: 400px;
+
+}
+
+}
+
+.btn-donate {
+    --clr-font-main: hsla(0 0% 20% / 100);
+    --btn-bg-1: hsla(194 100% 69% / 1);
+    --btn-bg-2: hsla(217 100% 56% / 1);
+    --btn-bg-color: hsla(360 100% 100% / 1);
+    --radii: 0.5em;
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: var(--size, 1rem);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+    border: none;
+    border-radius: var(--radii);
+    color: var(--btn-bg-color);
+    box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+  }
+  
+  .btn-donate:hover {
+    background-position: right top;
+  }
+  
+  .btn-donate:is(:focus, :focus-visible, :active) {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .btn-donate {
+      transition: linear;
+    }
+  }
+  /* Centrer le bouton "Donate now" */
+/* Animation fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Le bouton commence légèrement en dessous */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Le bouton revient à sa position normale */
+    }
+}
+
+/* Appliquer l'animation au bouton "Donate now" */
+.btn-donate {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1f62f0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    opacity: 0; /* Le bouton est invisible au départ */
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 3s; /* Le bouton apparaît après 3 secondes */
+}
+
+/* Effet de survol */
+.btn-donate:hover {
+    background-color: #b83b5e;
+}
+
+/*dezyem konpatiman*/
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  margin: 30px auto 20px; /* Ajout de 30px de marge en haut */
+  padding: 0 10px;
+  box-sizing: border-box;
+  gap: 10px; /* Ajuste cette valeur pour contrôler l'espacement entre les textes */
+}
+
+  
+  .text-container h2, .text-container p {
+    margin: 15px;
+    color: #333;
+    line-height: 1.2;
+  }
+  
+  .text-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0;
+  }
+  
+  .text-container p {
+   
+    font-size: 1.1rem;
+    margin-top: 0;
+ 
+  }
+  .card-slider {
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+  /* Conteneur des cartes (utilisé pour le défilement) */
+.slider-container {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  .card {
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff;
+    text-align: left;
+    border-radius: 0.5rem;
+    max-width: 290px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    margin: 0 10px;
+  }
+  
+  .header {
+    padding: 1.25rem 1rem 1rem 1rem;
+    background-color: #fff;
+  }
+  
+  .image {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:  2.5rem;
+    background-color: #668cd6;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 9999px;
+  }
+  .image img{
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .image svg {
+    color: #DC2626;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .content {
+    margin-top: 3.5rem;
+    text-align: center;
+  
+  }
+  
+  .title {
+    color: #111827;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin-top: 0.3rem;
+  }
+  
+  .message {
+    margin-top: 1.5rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  /* Boutons de navigation */
+  .next, .prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    z-index: 10;
+  }
+  
+  .prev {
+    left: 1px;
+    background-color: #0050b3;
+    color: #fff;
+  }
+  
+  .next {
+    right: 1px;
+    background-color: #0050b3;
+    color: #fff;
+  }
+  
+  
+  /* Responsiveness */
+  @media (max-width: 600px) {
+    .card-slider .slider-container {
+      flex-wrap: nowrap;
+    }
+  
+    .card {
+      min-width: 100%;
+      margin: 10px 0;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .card-slider .slider-container {
+      flex-wrap: nowrap;
+    }
+  
+    .card {
+      min-width: calc(50% - 20px);
+      margin: 10px;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .card-slider .slider-container {
+      flex-wrap: nowrap;
+    }
+  
+    .card {
+      min-width: calc(33.33% - 20px);
+      margin: 10px;
+    }
+  }
+/* Grand carré */
+.section3{
+  width: 90%;
+}
+.grand-carre {
+  width: 435px;
+  height: 435px;
+  position: relative;
+  margin-left: 18px;
+}
+
+/* Petits carrés */
+.petit-carre {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border: 1.5px solid #1f62f0;
+  background-color: transparent;
+}
+
+/* Positionnement des petits carrés */
+.top-left {
+  top: 0;
+  left: 0;
+  border-bottom: 0.3px solid #1f62f0;
+  border-right: 0.3px solid #4a7ef5;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+  border-bottom: 0.5px solid #1f62f0;
+  border-left: 0.5px solid #4a7ef5;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-top: 0.3px solid #1f62f0;
+  border-right: 0.3px solid #4a7ef5;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-top: 0.3px solid #1f62f0;
+  border-left: 0.3px solid #4a7ef5;
+}
+
+/* Carte superposée */
+.cardd {
+  width: 383px;
+  height: 383px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Grille de 2 colonnes */
+  grid-template-rows: repeat(2, 1fr);    /* Grille de 2 lignes */
+  gap: 10px; /* Espacement entre les photos */
+  padding: 10px; /* Ajout d'un peu de padding autour des photos */
+  border: 2px solid #fff;
+}
+
+/* Photos */
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Les photos remplissent chaque cellule */
+  margin-bottom: -25px;
+
+}
+/* Conteneur principal pour la carte et le texte */
+.containerr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  
+  margin: 80px auto 0 auto; /* Ajout de 20px de marge en haut */
+}
+
+
+/* Conteneur pour le texte */
+.text-containerr {
+  margin-left: 5px; /* Espacement entre la carte et le texte */
+  margin-bottom: 25px;
+}
+
+.text-containerr h2 {
+margin-top: 5px;
+  font-size: 2rem; /* Taille du titre */
+  color: #333;
+}
+
+.text-containerr p {
+  margin-bottom: 50px;
+  font-size: 1.1rem; /* Taille du texte */
+  color: #666;
+}
+.left{
+
+  width: 45%;
+}
+.right{
+
+  width: 55%;
+}
+.btn-donatee {
+  
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: hsla(194 100% 69% / 1);
+  --btn-bg-2: hsla(217 100% 56% / 1);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(
+    325deg,
+    var(--btn-bg-2) 0%,
+    var(--btn-bg-1) 55%,
+    var(--btn-bg-2) 90%
+  );
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow:
+    0px 0px 20px rgba(71, 184, 255, 0.5),
+    0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+    inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+    inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+
+.btn-donatee:hover {
+  background-position: right top;
+}
+
+.btn-donatee:is(:focus, :focus-visible, :active) {
+  outline: none;
+  box-shadow:
+    0 0 0 3px var(--btn-bg-color),
+    0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donatee {
+    transition: linear;
+  }
+}
+
+  
+  .btn-donatee:hover {
+    background-position: right top;
+  }
+  
+  .btn-donatee:is(:focus, :focus-visible, :active) {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+  }
+  
+  
+
+/* Appliquer l'animation au bouton "Donate now" */
+.btn-donatee {
+    display: block;
+    margin-left: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    opacity: 1; /* Le bouton est invisible au départ */
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 3s; /* Le bouton apparaît après 3 secondes */
+}
+
+/* Effet de survol */
+.btn-donate:hover {
+    background-color: #b83b5e;
+}
+
+ /*4 em konpatiman*/
+ .video-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%; 
+  overflow: hidden;
+  height: 500px; 
+   margin-top: 80px; 
+
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%; /* Assure que la vidéo prend la hauteur du conteneur */
+  object-fit: cover; /* Ajuste la vidéo pour remplir le conteneur sans déformer */
+  display: block;
+}
+
+
+.video-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.video-container .play-button {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  padding: 10px 20px; /* Ajuste la taille du bouton */
+  font-size: 18px; /* Ajuste la taille du symbole */
+  cursor: pointer;
+  outline: none;
+}
+
+.video-container:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.play-button {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  width: 60px; /* Réduction de la largeur */
+  height: 60px; /* Réduction de la hauteur */
+  border-radius: 100%;
+  background: linear-gradient(30deg, #1f62f0 20%, #0047ff 80%); /* Nouveau dégradé */
+  transition: all 0.3s ease-in-out 0s;
+  box-shadow: rgba(193, 244, 246, 0.698) 0px 0px 0px 0px;
+  animation: 1.2s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running pulse;
+  align-items: center;
+  border: 0;
+}
+
+.play-button:is(:hover, :focus) {
+  transform: scale(1.2);
+}
+
+@keyframes pulse {
+  100% {
+    box-shadow: 0 0 0 45px rgba(193,244,246,0);
+  }
+}
+
+/*5em konpatiman*/
+/* Conteneur principal pour la carte et le texte */
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 80px auto 0 auto; /* Ajout de 80px de marge en haut */
+}
+
+/* Styles pour le côté gauche (texte) */
+.text-wrapper {
+  margin-left: 5px;
+  margin-top: -80px; /* Ajustement pour déplacer tout le contenu du côté gauche un peu plus haut */
+}
+
+.text-wrapper h2 {
+  font-size: 2rem; 
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.text-wrapper p {
+  font-size: 1rem; 
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.icon-group {
+  display: flex;
+  gap: 80px; /* Espacement entre chaque groupe d'icône */
+  margin-bottom: 20px; /* Espacement entre la ligne des icônes et le bouton */
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.icon-bg {
+  width: 45px;
+  height: 45px;
+  background-color: #668cd6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px; /* Espacement entre l'icône et le texte */
+  margin-top: -20px; /* Ajustement pour déplacer l'icône légèrement vers le haut */
+}
+
+.icon-bg img {
+  width: 35px;
+  height: 35px;
+}
+
+.icon-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-description h3 {
+  font-size: 1.2rem; /* Taille du titre */
+  color: #333;
+  margin: 0; /* Retirer la marge par défaut */
+}
+
+.icon-description p {
+  font-size: 1rem; /* Taille de la description */
+  color: #666;
+  margin: 5px 0 0; /* Petite marge en haut */
+}
+
+.donate-button {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: hsla(194 100% 69% / 1);
+  --btn-bg-2: hsla(217 100% 56% / 1);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(
+    325deg,
+    var(--btn-bg-2) 0%,
+    var(--btn-bg-1) 55%,
+    var(--btn-bg-2) 90%
+  );
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow:
+    0px 0px 20px rgba(71, 184, 255, 0.5),
+    0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+    inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+    inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+
+.donate-button:hover {
+  background-position: right top;
+}
+
+.donate-button:is(:focus, :focus-visible, :active) {
+  outline: none;
+  box-shadow:
+    0 0 0 3px var(--btn-bg-color),
+    0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .donate-button {
+    transition: linear;
+  }
+}
+
+.donate-button:hover {
+  background-color: #b83b5e;
+}
+
+/* Styles pour le côté droit (carte avec photos) */
+.large-square {
+  width: 435px;
+  height: 435px;
+  position: relative;
+  margin-right: 18px; /* Ajustement pour l'alignement avec le texte */
+  float: right;
+}
+
+/* Petits carrés */
+.small-square {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border: 1.5px solid #1f62f0;
+  background-color: transparent;
+}
+
+/* Positionnement des petits carrés */
+.top-left-corner {
+  top: 0;
+  left: 0;
+  border-bottom: 0.3px solid #1f62f0;
+  border-right: 0.3px solid #4a7ef5;
+}
+
+.top-right-corner {
+  top: 0;
+  right: 0;
+  border-bottom: 0.5px solid #1f62f0;
+  border-left: 0.5px solid #4a7ef5;
+}
+
+.bottom-left-corner {
+  bottom: 0;
+  left: 0;
+  border-top: 0.3px solid #1f62f0;
+  border-right: 0.3px solid #4a7ef5;
+}
+
+.bottom-right-corner {
+  bottom: 0;
+  right: 0;
+  border-top: 0.3px solid #1f62f0;
+  border-left: 0.3px solid #4a7ef5;
+}
+
+/* Carte superposée */
+.overlay-card {
+  width: 383px;
+  height: 383px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px; /* Ajout d'un peu de padding autour de la photo */
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Photos */
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* La photo remplit toute la carte */
+  margin-bottom: -1px;
+}
+
+/* Largeur des sections */
+.left-content {
+  width: 50%;
+}
+
+.right-section {
+  width: 50%;
+}
+/*6em konpatiman*/
+
+.compartment {
+  display: flex;
+  width: 100%;
+  margin-top: 90px; /* Ajoute de l'espace en haut */
+}
+
+
+.image-right {
+  width: 55%;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-image: url('volunter.jpg');
+}
+
+.image-left {
+  width: 45%;
+  position: relative;
+  background-image: url('afterschool-activities_236854-18762.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Filtre noir transparent */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Texte en blanc */
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: -20px;
+  margin-bottom: 5px; /* Réduire la marge inférieure pour moins d'espace */
+}
+
+.large-text {
+  font-size: 2rem;
+  margin: 5px 0; /* Réduire la marge supérieure */
+}
+
+
+.small-text {
+  font-size: 1.1rem; /* Taille du texte plus petit */
+  margin: 10px 0; /* Espacement autour du texte */
+}
+/* From Uiverse.io by JsGrisales */ 
+.join {
+  min-height: 53px;
+  min-width: 166px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  position: relative;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-12.74%, rgba(0, 80, 179, 0.5)), color-stop(56.76%, rgba(0, 80, 179, 0.271)));
+background: linear-gradient(90deg, rgba(0, 80, 179, 0.5) -12.74%, rgba(0, 80, 179, 0.271) 56.76%);
+border: 2px solid rgba(0, 80, 179, 0.7);
+
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+  float: left;
+}
+
+.join:before {
+  content: "";
+  width: 4px;
+  height: 28px;
+  background-color: rgba(0, 80, 179, 0.5); /* 0.5 est le niveau d'opacité, tu peux ajuster entre 0 (transparent) et 1 (opaque) */
+
+  border: 2px solid #acf7ff;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  bottom: -7px;
+  left: 4px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.join:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  bottom: -2px;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #fffcf7;
+}
+/*7em knpatiman*/
+.compartment1 {
+  position: relative;
+  width: 30%; /* Largeur ajustée */
+  height: 455px; /* Hauteur ajustée */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0 0 0;
+  margin-left: 5%; /* Déplace le compartiment vers la gauche */
+}
+
+.image-container1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garde l'image bien ajustée */
+}
+
+/* Styles pour l'overlay */
+.overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Filtre noir */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+/* Styles pour les titres et les paragraphes dans l'overlay */
+.overlay1 h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  margin-left: -150px; /* Ajustement de l'espace à gauche */
+  margin-top: 70px; /* Ajouter de l'espace en haut */
+}
+
+.overlay1 p {
+  font-size: 1rem;
+  margin-left: -20px; /* Ajustement de l'espace à gauche */
+  margin-top: 10px; /* Ajouter de l'espace en haut */
+}
+
+/* Styles pour la carte superposée */
+.card1 {
+  position: absolute;
+  top: 50%; /* Superpose la carte vers le milieu de l'image */
+  left: 110%; /* Position de la première carte */
+  transform: translate(-30%, -50%); /* Déplace légèrement vers la gauche */
+  width: 60%; /* Largeur ajustée */
+  height: 320px; /* Hauteur ajustée */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+  padding: 20px;
+  text-align: center;
+  z-index: 2; /* Place la carte au-dessus de l'overlay */
+}
+
+/* Ajout des styles pour l'image dans les cartes */
+.card1 img {
+  width: 110%; /* Largeur augmentée à 110% */
+  height: 170px; /* Hauteur fixée */
+  object-fit: cover; /* Ajuste l'image sans déformation */
+  margin-bottom: 10px; /* Espace entre l'image et le texte */
+  margin-left: -5%; /* Ajuste pour recentrer l'image */
+  margin-top: -13px; /* Réduit la marge en haut */
+}
+
+/* Ajout de deux autres cartes avec espace entre elles */
+.card21 {
+  left: 175%; /* Position de la deuxième carte avec espace */
+  margin-left: 50px; /* Espace à droite de la première carte */
+}
+
+.card31 {
+  left: 240%; /* Position de la troisième carte avec espace */
+  margin-left: 98px; /* Espace à droite de la deuxième carte */
+}
+
+/* Styles pour le texte dans les cartes */
+.card1 h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem; /* Taille plus petite pour le h3 */
+  margin-top: 0;
+  margin-left: -20px;
+}
+
+.card1 p {
+  font-size: 0.9rem; /* Légère réduction de la taille du texte des paragraphes */
+  margin-left: -53px;
+}
+
+.card1 .highlight {
+  color: #333; /* Couleur noir foncé */
+  font-weight: bold; /* Optionnel: pour rendre le texte en noir foncé plus visible */
+}
+footer {
+  background-color:#004080; /* Bleu similaire à celui de ton header */
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 8%;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-container div {
+  width: 20%;
+  min-width: 200px;
+}
+
+.footer-container h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff; /* Couleur blanche pour les titres */
+}
+
+.footer-container p,
+.footer-container a {
+  color: #ddd; /* Une teinte plus claire pour les textes et les liens */
+  line-height: 1.6;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #ddd; /* Liens en bleu clair */
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  color: #fff; /* Changement de couleur au survol */
+}
+
+.footer-social .social-icons a {
+  margin-right: 10px;
+}
+
+.footer-newsletter input {
+  padding: 10px;
+  border: none;
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.footer-newsletter button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #004080; /* Le bleu du footer pour contraster */
+  border: none;
+  cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+  background-color: #ddd; /* Couleur légèrement plus sombre au survol */
+}
+
+.footer-bottom {
+  border-top: 1px solid  #0050b3; /* Bordure plus claire */
+  padding-top: 20px;
+  color: #ddd;
+}
+.footer-social .social-icons a {
+  color: #ddd; /* Icônes en bleu clair */
+  font-size: 24px;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+.footer-social .social-icons{
+  margin-left: 35px;
+}
+
+.footer-social .social-icons a:hover {
+  color: #fff; /* Changement de couleur au survol */
+}
+
+
+
+
+
+

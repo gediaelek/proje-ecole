@@ -1,0 +1,182 @@
+/* Style du body */
+body {
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f3f5ff;
+}
+
+/* Style du navbar */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-top: 30px;
+    float: right;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.text-container {
+    text-align: left;
+    padding-left: 20px;
+    margin-top: -10px;
+    background-color: #e6f2ff;
+    padding: 20px;
+    height: 160px;
+    align-items: center;
+   
+}
+
+.text-container h2 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    
+}
+
+.icon-group {
+    display: flex;
+    gap: 80px; /* Espacement entre chaque groupe d'icône */
+    margin-top: -120px; /* Espacement entre la ligne des icônes et le bouton */
+    float: right;
+    
+    transform: translateX(-250px); /* Ajuste la valeur pour le décalage souhaité */
+  }
+  
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-bg {
+    width: 45px;
+    height: 45px;
+    background-color: #668cd6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px; /* Espacement entre l'icône et le texte */
+    margin-top: -20px; /* Ajustement pour déplacer l'icône légèrement vers le haut */
+  }
+  
+  .icon-bg img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .icon-description {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .icon-description h3 {
+    font-size: 1.2rem; /* Taille du titre */
+    color: #333;
+    margin: 0; /* Retirer la marge par défaut */
+  }
+  
+  .icon-description p {
+    font-size: 1rem; /* Taille de la description */
+    color: #666;
+    margin: 5px 0 0; /* Petite marge en haut */
+  }
+
+.gallery-container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.gallery-item {
+    position: relative;
+    width: 30%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.gallery-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.gallery-item p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Animation */
+.animated-compartment {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animated-compartment.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.hidden {
+    display: none;
+}
+
+.toggle-button-container {
+    text-align: center;
+    margin: 20px;
+}
+
+#toggleGalleryButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #668cd6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggleGalleryButton:hover {
+    background-color: #556bb3;
+}
+
