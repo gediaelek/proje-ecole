@@ -16,8 +16,8 @@
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="#about">objectif</a></li>
                 <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#about">objectif</a></li>
                 <li><a href="#">Rapport excel</a></li>
                 <li><a href="#">liste donateurs</a></li>
                 <li class="hideOnMobile"><a href="#">Contact</a></li>
@@ -60,7 +60,9 @@
 
     <!-- Galeries de charité -->
     <!-- Premier compartiment (sans animation) -->
+    <button id="switch-button">Passer aux Vidéos</button>
     <section class="gallery-container no-animation" id="gallery">
+        
         <div class="gallery">
             <div class="gallery-item">
                 <img src="group-african-kids-learning-together_23-2148892522.avif" alt="Association 1">
@@ -151,9 +153,60 @@
     </section>
     
     <!-- Button to switch between galleries -->
-    <div class="toggle-button-container">
-        <button id="toggleGalleryButton">Switch to Video Gallery</button>
-    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>À propos de nous</h3>
+                <p>Nous sommes une organisation de charité dédiée à améliorer les conditions de vie des personnes dans le besoin.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+      
+            <div class="footer-links">
+                <h3>Liens rapides</h3>
+                <ul>
+                  <li><a href="#">Accueil</a></li>
+                  <li><a href="galerie.html">Galerie</a></li>
+                  <li><a href="#">Objectif</a></li>
+                  <li><a href="#">Rapport excel</a></li>
+                  <li><a href="#">liste donateurs</a></li>
+                  <li class=""><a href="#">Contact</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+      
+            <div class="footer-social">
+              <h3>Suivez-nous</h3>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-tiktok"></i></a>
+              </div>
+          </div>
+          
+      
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Recevez nos dernières nouvelles directement dans votre boîte mail.</p>
+                <form>
+                    <input type="email" placeholder="Votre adresse email">
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+      
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Adresse : 123 Rue de la Charité, Paris</p>
+                <p>Téléphone : +33 1 23 45 67 89</p>
+                <p>Email : contact@charite.org</p>
+            </div>
+        </div>
+      
+        <div class="footer-bottom">
+            <p>© 2024 Simen Lespwa. Tous droits réservés.</p>
+        </div>
+      </footer>
 
     <script src="galerie.js"></script>
 </body>

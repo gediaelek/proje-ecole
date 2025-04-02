@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partage de Données Excel</title>
+    <link rel="stylesheet" href="excel.css">
+</head>
+<body>
+    <h1>Partage de Données Excel</h1>
+
+    <!-- Formulaire pour charger un fichier Excel -->
+    <div>
+        <label for="excelFile">Télécharger un fichier Excel :</label>
+        <input type="file" id="excelFile" accept=".xlsx, .xls">
+    </div>
+
+    <!-- Bouton pour afficher/masquer le tableau -->
+    <div>
+        <button id="toggleTableButton">Afficher le tableau</button>
+    </div>
+
+    <!-- Zone d'affichage des données Excel -->
+    <div id="tableContainer" class="hidden">
+        <h2>Données Excel</h2>
+        <table id="excelTable" border="1"></table>
+    </div>
+
+    <script src="excel.js"></script>
+</body>
+</html>

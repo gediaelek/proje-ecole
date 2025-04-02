@@ -12,7 +12,7 @@ body{
 
 }
 nav{
-    background-color: #0050b3;
+    background-color: #800020;
     height: 80px;
     
 
@@ -122,131 +122,8 @@ nav a:not(.exclude):hover{
 .menu-button{
     display: none;
 }
-.image-container {
-    position: relative;
-    display: block;
-}
-.image-container img{
-    width: 100%;
-    height: 680px;
 
-}
-
-.image1{
-    
-    width: 100%;
-    height: auto;
-}
-    .gradient-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
-                    linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-        pointer-events: none; display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        color: white;
-        font-family: Arial, sans-serif;
-        
-        overflow: hidden;
-    }
-    .gradient-overlay h1{
-        color: #fff;
-        text-align: center;
-       margin-top: 10px;
-        
-        
-    }
-    .gradient-overlay p{
-      margin:  0 100px 0 100px ;
-      text-align: justify;
-        color: #fff;
-        
-    }
-    .centertexte p{
-        align-items: center; 
-    }
-    
-    
-    #welcome-message {
-        font-size: 2em;
-        animation: hallucinate 3s ease-in-out, fadeOut 2s 3s forwards;
-        margin-top: 10px;
-    }
-    
-    @keyframes hallucinate {
-        0%, 100% {
-            transform: scale(1);
-            opacity: 1;
-        }
-        50% {
-            transform: scale(1.5);
-            opacity: 0.5;
-        }
-    }
-    
-    @keyframes fadeOut {
-        to {
-            opacity: 0;
-        }
-    }
-    
-    #content {
-        display: none;
-    }
-    
-    #title, #text {
-        opacity: 0;
-        white-space: pre-wrap;
-    }
-    
-    @keyframes slideDown {
-        0% {
-            transform: translateY(-100%);
-            opacity: 0;
-        }
-        100% {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-    
-    @keyframes codeShake {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        25% {
-            transform: translateY(-5px);
-        }
-        75% {
-            transform: translateY(5px);
-        }
-    }
-    
-    #title {
-        animation: slideDown 1s ease-out, codeShake 0.5s 1s infinite;
-        margin-top: -245px;
-    }
-   #text {
-    opacity: 0;
-    transition: opacity 1s ease-in;
-}
-#title {
-    margin-bottom: 20px; /* Ajustez la valeur pour plus ou moins d'espace */
-    font-size: 1.5em; /* Juste pour ajuster la taille si nécessaire */
-    line-height: 1.2; /* Ajuste l'espacement entre les lignes si le texte du h1 est sur plusieurs lignes */
-}
-
-#text {
-    margin-top: 20px; /* Ajoute de l'espace au-dessus du texte */
-    font-size: 1.1em; /* Ajuste la taille du texte du paragraphe */
-    line-height: 1.6; /* Espacement des lignes dans le paragraphe */
-    color: #fff; /* Juste un exemple de couleur, modifiez selon vos besoins */
-}
+   
 
 
 .text-appear {
@@ -311,54 +188,7 @@ nav a{
 
 }
 
-.btn-donate {
-    --clr-font-main: hsla(0 0% 20% / 100);
-    --btn-bg-1: hsla(194 100% 69% / 1);
-    --btn-bg-2: hsla(217 100% 56% / 1);
-    --btn-bg-color: hsla(360 100% 100% / 1);
-    --radii: 0.5em;
-    cursor: pointer;
-    padding: 0.9em 1.4em;
-    min-width: 120px;
-    min-height: 44px;
-    font-size: var(--size, 1rem);
-    font-family: "Segoe UI", system-ui, sans-serif;
-    font-weight: 500;
-    transition: 0.8s;
-    background-size: 280% auto;
-    background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
-    border: none;
-    border-radius: var(--radii);
-    color: var(--btn-bg-color);
-    box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
-  }
-  
-  .btn-donate:hover {
-    background-position: right top;
-  }
-  
-  .btn-donate:is(:focus, :focus-visible, :active) {
-    outline: none;
-    box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
-    .btn-donate {
-      transition: linear;
-    }
-  }
-  /* Centrer le bouton "Donate now" */
-/* Animation fade-in */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px); /* Le bouton commence légèrement en dessous */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0); /* Le bouton revient à sa position normale */
-    }
-}
+
 
 /* Appliquer l'animation au bouton "Donate now" */
 .btn-donate {

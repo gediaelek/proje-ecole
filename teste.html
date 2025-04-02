@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forme Complexe avec Courbe</title>
-    <link rel="stylesheet" href="teste.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie Animée</title>
+  <link rel="stylesheet" href="teste.css">
 </head>
 <body>
-    <div class="container">
-        <div class="complex-shape">
-            <p>Texte à l'intérieur</p>
-        </div>
+  <div class="gallery-container">
+    <div class="gallery-header">
+      <h1>Galerie</h1>
+      <button id="switch-button">Passer aux Vidéos</button>
     </div>
+    <div class="gallery-content">
+      <div class="photos active">
+        <h2>Photos</h2>
+        <img src="closeup-shot-black-male-child-erasing-whiteboard_181624-46636.avif" alt="Photo 1">
+        <img src="close-up-kids-making-soap-bubbles-outside_23-2149265007.avif" alt="Photo 2">
+        <img src="closeup-shot-black-male-child-erasing-whiteboard_181624-46636.avif" alt="Photo 3">
+      </div>
+      <div class="videos">
+        <h2>Vidéos</h2>
+        <video controls>
+          <source src="video1.mp4" type="video/mp4">
+        </video>
+        <video controls>
+          <source src="video2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+  <script src="teste.js"></script>
 </body>
 </html>
-

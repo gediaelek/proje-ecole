@@ -1,41 +1,93 @@
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #f4f4f4;
+  height: 100vh;
+  overflow: hidden;
 }
 
-body {
+.gallery-container {
+  width: 100vw;
   height: 100vh;
-  background-color: #f0f0f0;
+  text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.container {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
 }
 
-.complex-shape {
+.gallery-header {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.gallery-content {
   width: 100%;
   height: 100%;
-  background-color: #3498db;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 2rem;
-  text-align: center;
-  position: relative;
-  
-  /* Clip-path to create the square with a curve on the right */
-  clip-path: polygon(0 0, 70% 0, 100% 0, 100% 100%, 70% 100%, 70% 80%, 90% 60%, 70% 40%, 70% 20%);
+  overflow: hidden;
 }
 
-.complex-shape p {
-  margin: 0;
-  padding: 20px;
+.photos, .videos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.photos.active {
+  left: 0;
+  opacity: 1;
+}
+
+.videos {
+  background-color: #222;
+  color: #fff;
+}
+
+.videos.active {
+  left: 0;
+  opacity: 1;
+}
+
+.photos img {
+  max-width: 80%;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.videos video {
+  max-width: 80%;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 10;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #0056b3;
 }

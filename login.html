@@ -1,0 +1,58 @@
+<<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagramme de Cas d'Utilisation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .diagram-container {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            border: 1px solid #ccc;
+            background: white;
+        }
+        .actor {
+            position: absolute;
+            font-weight: bold;
+            text-align: center;
+        }
+        .use-case {
+            position: absolute;
+            border: 2px solid #007bff;
+            border-radius: 50%;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #e7f3ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram-container">
+        <!-- Acteurs secondaires -->
+        <div class="actor" style="left: 50px; top: 150px;">Stock</div>
+        <div class="actor" style="left: 50px; top: 350px;">Vendeur</div>
+
+        <!-- Acteurs principaux -->
+        <div class="actor" style="right: 50px; top: 150px;">Client</div>
+        <div class="actor" style="right: 50px; top: 350px;">Caisse / Système</div>
+
+        <!-- Cas d'utilisation -->
+        <div class="use-case" style="left: 300px; top: 50px;">Entrer dans le magasin</div>
+        <div class="use-case" style="left: 300px; top: 150px;">Parcourir les rayons</div>
+        <div class="use-case" style="left: 300px; top: 250px;">Demander des renseignements</div>
+        <div class="use-case" style="left: 300px; top: 350px;">Prendre des articles</div>
+        <div class="use-case" style="left: 300px; top: 450px;">Passer à la caisse</div>
+        <div class="use-case" style="left: 300px; top: 550px;">Payer les achats</div>
+    </div>
+</body>
+</html>
