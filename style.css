@@ -122,6 +122,64 @@ nav a:not(.exclude):hover{
 .menu-button{
     display: none;
 }
+.imageakey {
+  width: 100%;  /* Prend toute la largeur */
+  height: 700px;  /* Ajuste la hauteur selon ton besoin */
+  background-image: url('DeWatermark.ai_1743612434174.png');  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;  /* Permet de positionner l'overlay */
+}
+.overlay-text {
+  position: absolute;
+  top: 50%;  /* Centre verticalement */
+  left: 50%;  /* Centre horizontalement */
+  transform: translate(-50%, -50%);  /* Ajuste parfaitement le centrage */
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.5);  /* Fond semi-transparent */
+  padding: 20px;
+  border-radius: 10px;  /* Coins arrondis */
+}
+.reserve-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #b30000;  /* Rouge grenat */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reserve-btn:hover {
+  background-color: #8a0000;  /* Rouge grenat plus foncé */
+}
+
+
+.fixed-button {
+  position: fixed; /* Garde le bouton fixe même en scrollant */
+  right: 20px; /* Distance du bord droit */
+  bottom: 20px; /* Distance du bas de l'écran */
+  background-color: #800020; /* Couleur bordeaux */
+  color: white; /* Texte blanc */
+  padding: 12px 20px; /* Taille du bouton */
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Ombre pour effet luxueux */
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+.fixed-button:hover {
+  background-color: #991f36; /* Légère variation au survol */
+}
 
    
 
@@ -333,17 +391,17 @@ nav a{
     border-radius: 50%;
     font-size: 18px;
     z-index: 10;
+    background-color: #b83b5e;
   }
   
   .prev {
     left: 1px;
-    background-color: #0050b3;
+    
     color: #fff;
   }
   
   .next {
     right: 1px;
-    background-color: #0050b3;
     color: #fff;
   }
   
@@ -397,7 +455,7 @@ nav a{
   width: 80px;
   height: 80px;
   position: absolute;
-  border: 1.5px solid #1f62f0;
+  border: 1.5px solid #800020;
   background-color: transparent;
 }
 
@@ -405,29 +463,29 @@ nav a{
 .top-left {
   top: 0;
   left: 0;
-  border-bottom: 0.3px solid #1f62f0;
-  border-right: 0.3px solid #4a7ef5;
+  border-bottom: 0.3px solid #800020;
+  border-right: 0.3px solid #a52a2a;
 }
 
 .top-right {
   top: 0;
   right: 0;
-  border-bottom: 0.5px solid #1f62f0;
-  border-left: 0.5px solid #4a7ef5;
+  border-bottom: 0.5px solid #800020;
+  border-left: 0.5px solid #a52a2a;
 }
 
 .bottom-left {
   bottom: 0;
   left: 0;
-  border-top: 0.3px solid #1f62f0;
-  border-right: 0.3px solid #4a7ef5;
+  border-top: 0.3px solid #800020;
+  border-right: 0.3px solid #a52a2a;
 }
 
 .bottom-right {
   bottom: 0;
   right: 0;
-  border-top: 0.3px solid #1f62f0;
-  border-left: 0.3px solid #4a7ef5;
+  border-top: 0.3px solid #800020;
+  border-left: 0.3px solid #a52a2a;
 }
 
 /* Carte superposée */
