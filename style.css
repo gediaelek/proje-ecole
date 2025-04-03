@@ -685,9 +685,9 @@ margin-top: 5px;
   width: 60px; /* Réduction de la largeur */
   height: 60px; /* Réduction de la hauteur */
   border-radius: 100%;
-  background: linear-gradient(30deg, #1f62f0 20%, #0047ff 80%); /* Nouveau dégradé */
+  background: linear-gradient(30deg, #9c133a 20%, #6e0d25 80%); /* Nouveau dégradé */
   transition: all 0.3s ease-in-out 0s;
-  box-shadow: rgba(193, 244, 246, 0.698) 0px 0px 0px 0px;
+  box-shadow: rgba(246, 193, 193, 0.698) 0px 0px 0px 0px;
   animation: 1.2s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running pulse;
   align-items: center;
   border: 0;
