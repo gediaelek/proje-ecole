@@ -10,28 +10,41 @@ body {
 }
 
 /* Style du navbar */
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
-    margin-top: 30px;
-    float: right;
-}
+nav{
+  background-color: #3b0513;
+  height: 80px;
+  
 
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
 }
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ 
+}
+nav li{
+  height: 50px;
 
-.navbar li a {
-    text-decoration: none;
-    color: #000;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
+  text-align: center;
+  
+}
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+nav a:not(.exclude):hover{
+  background-color: #fff;
+  color: black;
+
 }
 
 .text-container {
@@ -54,107 +67,90 @@ body {
     
 }
 
-.icon-group {
-    display: flex;
-    gap: 80px; /* Espacement entre chaque groupe d'icône */
-    margin-top: -120px; /* Espacement entre la ligne des icônes et le bouton */
-    float: right;
-    
-    transform: translateX(-250px); /* Ajuste la valeur pour le décalage souhaité */
-  }
-  
-  .icon-wrapper {
-    display: flex;
-    align-items: center;
-  }
-  
-  .icon-bg {
-    width: 45px;
-    height: 45px;
-    background-color: #668cd6;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px; /* Espacement entre l'icône et le texte */
-    margin-top: -20px; /* Ajustement pour déplacer l'icône légèrement vers le haut */
-  }
-  
-  .icon-bg img {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .icon-description {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .icon-description h3 {
-    font-size: 1.2rem; /* Taille du titre */
-    color: #333;
-    margin: 0; /* Retirer la marge par défaut */
-  }
-  
-  .icon-description p {
-    font-size: 1rem; /* Taille de la description */
-    color: #666;
-    margin: 5px 0 0; /* Petite marge en haut */
-  }
-
-.gallery-container {
-    width: 95%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
+h1{
+  text-align: center;
 }
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  z-index: 10;
+
+.car-gallery {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
+  width: 95%;
+  margin: 0 auto;
+  
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: space-around;
+.card1 {
+  
+  background-size: cover; 
+  background-position: center; 
+  width: 100%; 
+  height: 500px; 
+}
+.card2{
+  
+  background-size: cover; 
+  background-position: center; 
+  width: 100%; 
+  height: 500px; 
+}
+.card3{
+  
+  background-size: cover; 
+  background-position: center; 
+  width: 100%; 
+  height: 500px; 
 }
 
-.gallery-item {
-    position: relative;
-    width: 30%;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.car-card {
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 10px;
+  transition: transform 0.3s ease;
+  position: relative;
+  width: 400px;
+  height: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.car-card:hover {
+  transform: scale(1.05);
+}
+/*
+.car-header h2 {
+  font-size: 20px;
 }
 
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+.car-details {
+  padding: 10px;
 }
 
-.gallery-item h3 {
-    margin: 10px 0 5px;
-    font-size: 1.2rem;
-    color: #333;
+
+
+.icons {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
 }
 
-.gallery-item p {
-    font-size: 1rem;
-    color: #666;
-    text-align: center;
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+small {
+  display: block;
+  color: #aaa;
 }
 
 /* Animation */

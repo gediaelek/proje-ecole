@@ -778,8 +778,8 @@ margin-top: 5px;
 
 .donate-button {
   --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: rgb(245, 24, 24);
-  --btn-bg-2: hsl(0, 82%, 49%);
+  --btn-bg-1: rgb(71, 5, 5);
+  --btn-bg-2: hsl(0, 87%, 21%);
   --btn-bg-color: hsla(360 100% 100% / 1);
   --radii: 0.5em;
   cursor: pointer;
@@ -976,9 +976,9 @@ h1 {
   justify-content: space-around;
   position: relative;
   cursor: pointer;
-  background: -webkit-gradient(linear, left top, right top, color-stop(-12.74%, rgba(0, 80, 179, 0.5)), color-stop(56.76%, rgba(0, 80, 179, 0.271)));
-background: linear-gradient(90deg, rgba(0, 80, 179, 0.5) -12.74%, rgba(0, 80, 179, 0.271) 56.76%);
-border: 2px solid rgba(0, 80, 179, 0.7);
+  background: -webkit-gradient(linear, left top, right top, color-stop(-12.74%, rgba(161, 3, 29, 0.5)), color-stop(56.76%, rgba(126, 5, 5, 0.271)));
+background: linear-gradient(90deg, rgba(165, 9, 9, 0.5) -12.74%, rgba(235, 15, 15, 0.271) 56.76%);
+border: 2px solid rgba(155, 7, 19, 0.7);
 
   color: #FFFFFF;
   font-size: 18px;
@@ -990,9 +990,9 @@ border: 2px solid rgba(0, 80, 179, 0.7);
   content: "";
   width: 4px;
   height: 28px;
-  background-color: rgba(0, 80, 179, 0.5); /* 0.5 est le niveau d'opacité, tu peux ajuster entre 0 (transparent) et 1 (opaque) */
+  background-color: rgba(212, 7, 7, 0.5); /* 0.5 est le niveau d'opacité, tu peux ajuster entre 0 (transparent) et 1 (opaque) */
 
-  border: 2px solid #acf7ff;
+  border: 2px solid #830909;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
