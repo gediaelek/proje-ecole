@@ -1,7 +1,6 @@
 <?php
 session_start();
-require_once 'db.php';
-
+require_once 'crservation.php'
 if (!isset($_SESSION['user_id'])) {
     echo json_encode(["error" => "Vous devez être connecté pour réserver."]);
     exit;
@@ -78,6 +77,8 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 $categories = $pdo->query("SELECT * FROM categories")->fetchAll();
 ?>
+
+
 
 <form id="reservationForm">
     <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
