@@ -1,54 +1,36 @@
 <?php
 session_start();
-require_once 'connection';
+require_once 'db.php'; // Assurez-vous d'avoir ce fichier pour la connexion à la DB
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
     $password = $_POST['password'];
 
+    // 1. Vérification que les champs ne sont pas vides
     if (empty($username) || empty($password)) {
-        $_SESSION['error'] = "Tous les champs sont obligatoires.";
-        header("Location: login.php");
-        exit;
+        die("Tous les champs sont obligatoires");
     }
 
-    // Protection contre le brute force
-    if (!isset($_SESSION['login_attempts'])) {
-        $_SESSION['login_attempts'] = 0;
-    }
-
-    if ($_SESSION['login_attempts'] >= 3) {
-        $_SESSION['error'] = "Trop de tentatives. Réessayez plus tard.";
-        header("Location: login.php");
-        exit;
-    }
-
+    // 2. Recherche de l'utilisateur dans la base
     try {
         $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
         $stmt->execute([$username]);
         $user = $stmt->fetch();
 
-        $hashedPassword = $user['password'] ?? '';
-
-        if ($user && password_verify($password, $hashedPassword)) {
+        // 3. Vérification du mot de passe
+        if ($user && password_verify($password, $user['password'])) {
+            // Connexion réussie
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
-            $_SESSION['is_admin'] = ($user['username'] === 'admin');
-
-            $_SESSION['login_attempts'] = 0; // Réinitialiser le compteur
+            $_SESSION['is_admin'] = ($user['username'] === 'admin'); // Optionnel pour les admins
+            
             header("Location: upload.php");
             exit;
         } else {
-            $_SESSION['login_attempts']++;
-            $_SESSION['error'] = "Nom d'utilisateur ou mot de passe incorrect.";
-            header("Location: login.php");
-            exit;
+            echo "Nom d'utilisateur ou mot de passe incorrect.";
         }
     } catch (PDOException $e) {
-        error_log("Erreur de base de données: " . $e->getMessage());
-        $_SESSION['error'] = "Une erreur est survenue, veuillez réessayer plus tard.";
-        header("Location: login.php");
-        exit;
+        die("Erreur de base de données: " . $e->getMessage());
     }
 }
 ?>

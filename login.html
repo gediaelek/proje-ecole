@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Formulaire de connexion en HTML & CSS - Frenchcoder</title>
+  <title>Connexion</title>
   <link rel="stylesheet" href="login.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
 </head>
 <body>
-  <form>
-     
+  <form action="index.html" method="POST">
     <h1>Se connecter</h1>
     <div class="social-media">
       <p><i class="fab fa-google"></i></p>
@@ -20,8 +19,8 @@
     <p class="choose-email">ou utiliser mon adresse e-mail :</p>
     
     <div class="inputs">
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Mot de passe">
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Mot de passe" required />
     </div>
     
     <p class="inscription">Je n'ai pas de <a href="inscrire.html"><span>compte</span></a>. Je m'en <span>crée</span> un.</p>
@@ -29,5 +28,9 @@
       <button type="submit">Se connecter</button>
     </div>
   </form>
+  <?php if (!empty($message)) : ?>
+    <p style="color: red; text-align: center;"><?php echo $message; ?></p>
+<?php endif; ?>
+
 </body>
 </html>
