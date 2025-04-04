@@ -1,40 +1,48 @@
 <?php
+
+
 session_start();
-require_once 'config.php';
+var_dump($_SESSION['panier'] ?? []);
+exit;
 
-$conn = db();
 
-// Vérifier si l'utilisateur est connecté
-if (!isset($_SESSION["utilisateur_id"])) {
-    die("Vous devez être connecté pour voir votre panier.");
-}
+echo "<pre>";
+print_r($_SESSION['panier']);
+echo "</pre>";
 
-// Vérifier si le panier existe et contient des véhicules
+// Vérifier si le panier existe
 if (!isset($_SESSION['panier']) || empty($_SESSION['panier'])) {
-    echo "Votre panier est vide.";
+    echo "<h2>Votre panier est vide.</h2>";
     exit();
 }
 
-// Récupérer les véhicules ajoutés au panier
-$ids = implode(',', array_map('intval', $_SESSION['panier']));
-$sql = "SELECT id, marque, modele, prix_jour, image FROM vehicules WHERE id IN ($ids)";
+$ids = implode(',', $_SESSION['panier']);
+$sql = "SELECT * FROM vehicules WHERE id IN ($ids)";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+$total = 0;
+
+if ($result && $result->num_rows > 0) {
+    echo "<h2>Votre panier</h2>";
+    echo "<table border='1'>";
+    echo "<tr><th>Image</th><th>Marque</th><th>Modèle</th><th>Prix/jour</th><th>Action</th></tr>";
+    
     while ($row = $result->fetch_assoc()) {
-        echo "<div>";
-        echo "<h2>" . $row["marque"] . " " . $row["modele"] . "</h2>";
-        echo "<p>Prix par jour : " . $row["prix_jour"] . "€</p>";
-        if (!empty($row["image"])) {
-            echo "<img src='images/" . $row["image"] . "' width='150'>";
-        }
-        echo "<form action='supprimer_du_panier.php' method='POST'>";
-        echo "<input type='hidden' name='vehicule_id' value='" . $row["id"] . "'>";
-        echo "<button type='submit'>Supprimer</button>";
-        echo "</form>";
-        echo "</div><hr>";
+        echo "<tr>";
+        echo "<td><img src='images/" . $row['image'] . "' width='100'></td>";
+        echo "<td>" . $row['marque'] . "</td>";
+        echo "<td>" . $row['modele'] . "</td>";
+        echo "<td>" . $row['prix_jour'] . "€</td>";
+        echo "<td><a href='supprimer_du_panier.php?id=" . $row['id'] . "'>Supprimer</a></td>";
+        echo "</tr>";
+        
+        $total += $row['prix_jour'];
     }
+    
+    echo "</table>";
+    echo "<h3>Total : " . $total . "€</h3>";
+    echo "<a href='valider_panier.php'>Valider la réservation</a>";
 } else {
-    echo "Aucune voiture trouvée.";
+    echo "<h2>Votre panier est vide.</h2>";
 }
 ?>

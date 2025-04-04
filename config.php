@@ -5,14 +5,12 @@ class Database {
 
     // Constructeur privé pour empêcher l'instanciation directe
     private function __construct() {
-        $this->connection = new mysqli("localhost", "root", "", "location_voiture");
-
-        // Vérification de la connexion
-        if ($this->connection->connect_error) {
-            die("Échec de la connexion MySQL: " . $this->connection->connect_error);
+        try {
+            $this->connection = new PDO("mysql:host=localhost;dbname=location_voiture;charset=utf8mb4", "root", "");
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            die("Erreur de connexion : " . $e->getMessage());
         }
-
-        $this->connection->set_charset("utf8mb4");
     }
 
     // Méthode pour obtenir l'instance unique de la base de données
@@ -23,13 +21,13 @@ class Database {
         return self::$instance;
     }
 
-    // Retourne la connexion MySQL
+    // Retourne la connexion PDO
     public function getConnection() {
         return $this->connection;
     }
 
     // Empêcher le clonage de l'objet
-    private function __clone() { }
+    private function __clone() {}
 
     // Empêcher la désérialisation
     public function __wakeup() {
@@ -37,7 +35,7 @@ class Database {
     }
 }
 
-// Fonction utilitaire pour récupérer la connexion
+// Fonction utilitaire pour récupérer la connexion PDO
 function db() {
     return Database::getInstance()->getConnection();
 }
